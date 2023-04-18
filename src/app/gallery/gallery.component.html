@@ -1,0 +1,26 @@
+<div class="phone-wrapper">
+  <div class="phone">
+    <div class="screen">
+      <div class="title-wrapper">
+        <img class="logo" src="../../assets/Logo.png" alt="Logo" />
+        <h2 class="title">Gallery</h2>
+        <!-- <button class="back-button" (click)="goBack()">Back</button>  -->
+        <button class="back-button" (click)="goBack()"><i class="fas fa-arrow-left"></i></button>
+      </div>
+      <div class="gallery">
+        <img *ngFor="let image of images" [src]="image" (click)="showImage(image)">
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="button"></div>
+      <div class="button"></div>
+      <div class="button"></div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="selectedImage" class="modal">
+  <div class="modal-content">
+    <img [src]="selectedImage" (click)="closeModal()">
+  </div>
+</div>

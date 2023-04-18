@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+/* Import Font Awesome CSS */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color:#343434;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.title {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  
+  /* Animation for title */
+  animation: titleAnimation 0.5s ease-out;
+}
+
+/* Back Button */
+
+.back-button {
+  color: #ffffff;
+  background-color: #343434;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  display: flex; /* Add display flex to align icon vertically and horizontally */
+  align-items: center; /* Add align items center to align icon vertically */
+  justify-content: center; /* Add justify content center to align icon horizontally */
+  
+  /* Animation for back button */
+  animation: backButtonAnimation 0.5s ease-out;
+}
+
+.back-button i {
+  margin-right: 5px; /* Add margin right to create space between icon and button text */
+}
+/* Animation for back button */
+@keyframes backButtonAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Main Screen Display */
+
+
+/* Image Display */
+
+.phone-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: #252020e4;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+
+.screen {
+  background-color: #222;
+  height: 100%;
+  padding: 15px;
+  overflow-y: auto; /* Add scrollbar when necessary */
+
+  /* Customize scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: red #000;
+}
+
+/* Webkit-based browsers */
+.screen::-webkit-scrollbar {
+  width: 8px;
+  background-color: #000;
+}
+
+/* Customize scrollbar thumb */
+.screen::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 5px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button {
+  background-color: #666;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+/* Add hover effect for full-screen image */
+.modal img:hover {
+  transform: scale(1.1); /* Scale the image to 110% on hover */
+}
+
+/* Animation for title */
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
